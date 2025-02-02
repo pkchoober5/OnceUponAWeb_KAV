@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pkchoober5's Weekly Sketch</title>
+    <link rel="stylesheet" href="Runescape.css">
+</head>
+<body>
+	<!--Lumbridge-->
+	<div class="scene" id="Lumbridge" style="background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/03/old-school-runescape-gordon-ramsay-lumbridge-castle-1.jpg');">
+		<div class="message" id="message-Lumbridge">
+		Welcome to the world of Gielinor, adventurer. Click to continue your journey.</div>
+		<div class ="click-area" id="click-area-Lumbridge"> </div>
+		<audio id="audio-Lumbridge" src="Old RuneScape Soundtrack_ Harmony.mp3" loop></audio></div>
+
+	<!-- Varrock-->
+	<div class="scene hidden" id="Varrock" style="background-image: url('https://static.wikia.nocookie.net/runescape2/images/f/fd/Top_o%27_varrock.png/revision/latest?cb=20160426195153');">
+		<div class="message" id="message-Varrock">
+		You journey your way to the city known as Varrock. Here you will be tasked to complete quests. Onwards...</div>
+		<div class ="click-area" id="click-area-Varrock"> </div>
+		<audio id="audio-Varrock" src="OSRS Varrock Music Runescape 2007.mp3" loop></audio></div>
+
+<script>
+	//Areas
+	const places = {
+		Lumbridge: document.getElementById('Lumbridge'),
+		Varrock: document.getElementById('Varrock')
+	};
+	//Text
+	const message= {
+		message: document.getElementById('message-Lumbridge'),
+		messageVarrock: document.getElementById('message-Varrock')
+	};
+	//Clickable areas
+	const clickAreas= {
+		clickAreaLumbridge: document.getElementById('click-area-Lumbridge'),
+		clickAreaVarrock: document.getElementById('click-area-Varrock')
+	};
+	//Audio
+	const audios = {
+		Lumbridge: document.getElementById('audio-Lumbridge'),
+		Varrock: document.getElementById('audio-Varrock')
+	};
+	// Audio (Please Work)
+	function playAudio(newScene){
+		//Should stop audio
+		for(let key in audios) {
+		audios[key].pause();
+		audios[key].currentTime = 0;
+	}
+	//Plays the audio
+	audios[newScene].play();
+}
+	//Lumbridge to Varrock
+	clickAreas.clickAreaLumbridge.addEventListener('click', () =>{ 
+	places.Lumbridge.classList.add('hidden');
+	places.Varrock.classList.remove('hidden');
+	playAudio('Varrock');
+});
+	window.addEventListener('load',() =>{
+	playAudio('Lumbridge');
+});
+</script>
+</body>
+</html>
