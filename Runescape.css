@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	font-family: Arial,sans-serif;
+	overflow: hidden;
+}
+.scene {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-size:cover;
+	background-position: center;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.scene.active {
+	display:flex;
+}
+.message {
+	position: absolute;
+	top: 10%;
+	left:50%;
+	transform: translateX(-50%);
+	background:rgba(0,0,0,0.6);
+	color:yellow;
+	padding:15px;
+	border-radius:8px;
+	text-align:center;
+	font-size:18px;
+	font:Arial;
+	text-shadow: 5px 5px 10px whitesmoke;
+}
+.click-box {
+	position:absolute;
+	width: 250px;
+	height: 150px;
+	border-radius: 50%;
+	cursor:pointer;
+	background:rgba(255,255,255,0.5);
+	transition: background 0.3s;
+	font:Arial;
+	font-size: 20px;
+	text-shadow:1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	color:dodgerblue;
+	box-sizing:border-box;
+}
+.click-box:hover{
+	background:rgba(255,255,255,0.5);
+}
+.custom-arrow{
+	width: 50px;
+	height: 50px;
+	background-image: url("Dragon_Scimitar.png");
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	position:absolute;
+	pointer-events: none;
+	z-index:999;
+	transform:translate(-50%,-50%);
+}
+.pkinventory{
+	width:500px;
+	height:500px;
+	background-image: url("Pking.png");
+	background-repeat:no-repeat;
+	z-index: 999;
+	position:absolute;
+}
+.lumbridgeinventory{
+	background-image: url("Lumbridgeinventory.png");
+	background-repeat:no-repeat;
+	width:500px;
+	height:600px;
+	background-size:contain;
+	z-index: 999;
+	position:absolute;
+}
+.tombsinventory{
+	background-image: url("Tombsinventory.png");
+	background-repeat:no-repeat;
+	width:500px;
+	height:600px;
+	background-size:contain;
+	z-index: 999;
+	position:absolute;
+}
+.varrockinventory{
+	background-image: url("Varrockinventory.jpg");
+	background-repeat:no-repeat;
+	width:500px;
+	height:600px;
+	background-size:contain;
+	z-index: 999;
+	position:absolute;
+}
+.shop{
+	background-image: url("Shop.jpg");
+	background-repeat:no-repeat;
+	width:700px;
+	height:650px;
+	background-size:contain;
+	z-index: 999;
+	position:absolute;
+}
+.hidden{
+	display:none;
+}
