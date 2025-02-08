@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pkchoober5's Weekly Sketch</title>
+    <link rel="stylesheet" href="Runescape.css">
+</head>
+<body>
+  <!-- Starting Area Lumbridge -->
+  <div class="scene active" id="Lumbridge" style="background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/03/old-school-runescape-gordon-ramsay-lumbridge-castle-1.jpg');">
+    <div class="message">Welcome to the world of Gielinor, adventurer. In this world you'll come across a vast continent filled with countless regions of interest. In each region you will encounter various types of monsters and players. If you take a look to your right, you will see the items given to you for this expedition. Prepare yourself for a long journey ahead. Once you are ready, click continue below. </div>
+    <div class="click-box" id="Lumbridge-box" style="top:90%;">
+    Click here to continue...</div>
+    <div class="lumbridgeinventory" id="lumbridgeinventory"style="left:80%;"></div>
+    <audio id="audio-Lumbridge" src="Old RuneScape Soundtrack_ Harmony.mp3" loop preload="auto"></audio></div>
+
+  <!-- Onwards to Varrock -->
+  <div class="scene" id="Varrock" style="background-image: url('https://oldschool.runescape.wiki/images/thumb/Varrock.png/1200px-Varrock.png?620c5');">
+    <div class="message">Welcome to Varrock. This city contains many stores and training locations for you to level up your skills. Try looking around and speak to the people of Varrock for quests. Quests are a great way of obtaining XP. I see that you have some goods to sell in your inventory. You should sell your items to Horvik. Horvik also has armor to sell. Click continue below when you are ready to seek Horvik.</div>
+    <div class="click-box" id="Varrock-box" style="top:90%;">
+    Click here to continue...</div>
+    <div class="varrockinventory" id="varrockinventory"style="left:80%;"></div>
+    <audio id="audio-Varrock" src="OSRS Varrock Music Runescape 2007.mp3" loop preload="auto"></audio></div>
+
+  <!-- Varrock Shop -->
+  <div class="scene" id="Shop" style="background-image: url('https://oldschool.runescape.wiki/images/Horvik%27s_Armour_Shop..png?5bbcf');">
+    <div class="message">Hello adventurer. My name is Horvik. I've heard great things about you. There is a tomb not too far off that you should be aware of. Within the tomb there is said to be a God name Tumeken, that controls the Tomb. He is however not alone. There are 4 guardians in the tomb. Be careful! It is very dangerous, and you should not go unprepared. I may have something in my shop to help you gear up for the Tombs of Amascut.</div>
+    <div class="click-box" id="Shop-box" style="top:90%;">
+    Click here to continue... </div>
+    <div class="shop" id="shop"style="center:0%;"></div>
+    <audio id="audio-Shop" src="Old RuneScape Soundtrack_ Sea Shanty2.mp3" loop preload="auto"></audio></div>
+
+  <!-- Tombs of Amascut-->
+  <div class="scene" id="Tomb" style="background-image: url('https://i.redd.it/jkgnb49m36x91.png');">
+    <div class="message">You've made it so far adventurer. Here is the Tomb of Amascut. In here you'll encounter 4 unique guardian bosses and a puzzle room for each boss. Zebak, the Guardian of Crondis, is the strongest crocodile in the world. Kephri, the Guardian of Scabaras, is the last known kind of dawn scarab. Ba-Ba, the Guardian of Apmeken, is an ancient goddess baboon. Akkha, the Guardian of Het, is a powerful apparition. Finally, there is Tumeken. Tumeken is the God of the Sun. In order to beat him, you must first lay the groundwork by eliminating the guardians. Should you defeat Tumeken, you will be granted with generous loot. Horvik's gear is not strong enough for the tombs. Take a look to your right. I have given you gear to complete the Tombs of Amascut. When you are ready, click continue below.</div>
+    <div class="click-box" id="Tomb-box" style="top:90%;">
+    Click here to continue...</div>
+    <div class="tombsinventory" id="tombsinventory"style="left:80%;"></div>
+    <audio id="audio-Tomb" src="Old School RuneScape Soundtrack_ Amascut's Promise.mp3" loop preload="auto"></audio></div>
+
+<!-- Puzzle Scene -->
+<div class="scene" id="Puzzle" style="background-image: url('https://oldschool.runescape.wiki/images/thumb/Tombs_of_Amascut_-_Nexus_room.png/300px-Tombs_of_Amascut_-_Nexus_room.png?a5928');">
+  <div class="message">You have entered the Puzzle Room in the Tombs of Amascut. In front of you lies a locked ancient door that requires solving a riddle to proceed.  
+  The inscription reads: "I am Tumeken. I rule this pyramid. I use fire and love heat. What am I the god of?"  
+  Click the correct answer below to unlock the door.</div>
+
+  <div class="puzzle-options">
+    <div class="click-box puzzle-option" id="option1" style="top:70%; left:20%;">1. Moon</div>
+    <div class="click-box puzzle-option" id="option2" style="top:70%; left:50%;">2. Sun</div>
+    <div class="click-box puzzle-option" id="option3" style="top:70%; left:80%;">3. Earth</div>
+  </div>
+
+  <div class="feedback" id="feedback"></div>
+  
+</div>
+  <!--Rewards-->
+  <div class="scene" id="Rewards" style="background-image: url('https://i.redd.it/bby4l7qg4bhb1.png');"style="background-size: cover;">
+    <div class="message">Congratulations Adventurer! You have defeated the guardians and Tumeken. You've come a long way from Lumbridge.I am very proud of you. Click on the chest for your reward </div>
+    <div class="chest-container">
+    <div class="chest" id="reward-chest" style="cursor: pointer; background: url('chest-closed.png') no-repeat center; width: 150px; height: 150px;"></div>
+    <div class="reward-item" id="tumeken-reward" style="display: none;">
+      <img src="Tumeken's_shadow.png" alt="Tumeken's Shadow" style="width: 80px;">
+      <p style="color: gold; font-weight: bold;">Tumeken's Shadow</p>
+    </div>
+  </div>
+    <div class="click-box" id="Restart-box" style="top:90%;">
+      Restart your journey...
+    </div>
+    <audio id="audio-Rewards" src="Old RuneScape Soundtrack_ Wilderness.mp3" loop preload="auto"></audio></div>
+
+  <!-- Dragon Scimitar Cursor -->
+  <div class="custom-arrow" id="custom-arrow"></div>
+
+  <script>
+    const scenes = ['Lumbridge', 'Varrock', 'Shop', 'Tomb','Puzzle', 'Rewards'];
+    let currentSceneIndex = 0;
+
+    const audios = {
+      Lumbridge: document.getElementById('audio-Lumbridge'),
+      Varrock: document.getElementById('audio-Varrock'),
+      Shop: document.getElementById('audio-Shop'),
+      Tomb: document.getElementById('audio-Tomb'),
+      Rewards: document.getElementById('audio-Rewards')
+    };
+
+    const customArrow = document.getElementById('custom-arrow');
+
+    // Move the custom arrow with the cursor
+    document.addEventListener('mousemove', (e) => {
+      customArrow.style.left = `${e.pageX}px`;
+      customArrow.style.top = `${e.pageY}px`;
+    });
+
+    // Click-box functionality
+    function initSceneClickBoxes() {
+      document.querySelectorAll('.click-box').forEach((box) => {
+        box.addEventListener('click', handleBoxClick);
+      });
+    }
+
+    function handleBoxClick() {
+      changeScene(currentSceneIndex + 1);
+    }
+    function changeScene(newIndex) {
+    stopAllAudio();
+
+    // Hide all scenes
+    scenes.forEach(scene => document.getElementById(scene).classList.remove('active'));
+
+     // Handles scene progression
+      if (newIndex < scenes.length) {
+        currentSceneIndex = newIndex;
+      }
+
+      const nextScene = scenes[currentSceneIndex];
+      document.getElementById(nextScene).classList.add('active');
+      audios[nextScene].play();
+    }
+  
+
+    // Stop all audio
+    function stopAllAudio() {
+      Object.values(audios).forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    }
+
+    // Start audio on initial click
+    document.addEventListener('click', function initAudioPlay() {
+      audios.Lumbridge.play();
+      document.removeEventListener('click', initAudioPlay);
+    });
+
+    // Initialize the click-boxes
+    initSceneClickBoxes();
+     // Add Puzzle Scene to the scene sequence
+  scenes.splice(4, 0, 'Puzzle');
+
+  // Puzzle solution handling
+  document.getElementById('option1').addEventListener('click', () => showFeedback(false));
+  document.getElementById('option2').addEventListener('click', () => {
+    showFeedback(true);
+    setTimeout(() => changeScene(currentSceneIndex + 1), 2000); // Move to Rewards scene after correct answer
+  });
+  document.getElementById('option3').addEventListener('click', () => showFeedback(false));
+
+  // Show feedback for puzzle answers
+  function showFeedback(isCorrect) {
+    const feedback = document.getElementById('feedback');
+    feedback.style.display = 'block';
+    feedback.innerText = isCorrect ? 'Correct! The door unlocks...' : 'Incorrect. Try again, adventurer.';
+    if (!isCorrect) {
+      setTimeout(() => feedback.style.display = 'none', 1500);
+    }
+  }
+   document.getElementById('Restart-box').addEventListener('click', () => {
+      changeScene(0); // Reset to Lumbridge
+    });
+  const chest = document.getElementById('reward-chest');
+  const reward = document.getElementById('tumeken-reward');
+  
+  chest.addEventListener('click', () => {
+    chest.style.background = "url('chest-open.png') no-repeat center";
+    chest.style.backgroundSize = "contain";
+    reward.style.display = "block"; 
+  });
+
+  </script>
+</body>
+</html>

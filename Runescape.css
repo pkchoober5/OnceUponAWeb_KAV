@@ -12,9 +12,12 @@ body{
 	display: none;
 	justify-content: center;
 	align-items: center;
+	transition: opacity 5s ease;
+	opacity:0;
 }
 .scene.active {
 	display:flex;
+	opacity:1;
 }
 .message {
 	position: absolute;
@@ -109,3 +112,38 @@ body{
 .hidden{
 	display:none;
 }
+.puzzle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* The puzzle message */
+.puzzle-message {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.puzzle-buttons {
+  display: flex;
+  gap: 10px;
+}
+.reward-item {
+      display: none;
+      margin-top: 20px;
+    }
+
+.reward-item img {
+      width: 150px;
+      border: 4px solid darkred;
+      border-radius: 10px;
+    }
